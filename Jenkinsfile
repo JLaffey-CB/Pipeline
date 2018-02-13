@@ -11,8 +11,11 @@ pipeline {
     }
     stage('stagetwo') {
       steps {
-        sh 'ls'
-        timeout(time: 10)
+        sleep 5
+        timeout(time: 6) {
+          sh 'ls'
+        }
+        
       }
     }
     stage('stagethree') {

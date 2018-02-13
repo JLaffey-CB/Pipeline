@@ -12,7 +12,7 @@ pipeline {
     stage('stagetwo') {
       steps {
         sh 'ls'
-        retry(count: 2)
+        timeout(time: 10)
       }
     }
     stage('stagethree') {

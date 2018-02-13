@@ -26,7 +26,8 @@ pipeline {
         
       }
       steps {
-        echo 'We could limit this to a specific node for just this step'
+        echo 'We can limit this to a specific node for just this step'
+        sh 'ls'
       }
     }
   }

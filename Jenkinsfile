@@ -6,7 +6,7 @@ pipeline {
         localvar = 'onlysstageone'
       }
       steps {
-        echo 'Hi!  I\'m stage one'
+        echo 'Hi!  I am stage one'
       }
     }
     stage('stagetwo') {
@@ -19,14 +19,9 @@ pipeline {
       }
     }
     stage('stagethree') {
-      agent {
-        node {
-          label 'node1'
-        }
-        
-      }
+      agent any
       steps {
-        echo 'We\'re limiting this to a specific node because we can'
+        echo 'We could limit this to a specific node for just this step'
       }
     }
   }

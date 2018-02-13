@@ -19,7 +19,12 @@ pipeline {
       }
     }
     stage('stagethree') {
-      agent any
+      agent {
+        node {
+          label 'CentOSAgent'
+        }
+        
+      }
       steps {
         echo 'We could limit this to a specific node for just this step'
       }

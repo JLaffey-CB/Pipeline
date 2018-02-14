@@ -21,7 +21,7 @@ pipeline {
     stage('stagethree') {
       agent {
         node {
-          label 'centos-7'
+          label 'CentOSAgent'
         }
         
       }

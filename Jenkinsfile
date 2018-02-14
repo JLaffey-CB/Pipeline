@@ -28,6 +28,10 @@ pipeline {
       steps {
         echo 'We can limit this to a specific node for just this step'
         sh 'ls'
+        dir(path: 'cd ..') {
+          sh 'ls'
+        }
+        
       }
     }
   }

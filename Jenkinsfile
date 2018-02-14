@@ -53,7 +53,7 @@ pipeline {
 
     }
 }
-  }
+
   environment {
     Global = 'IBeEverywhere'
   }

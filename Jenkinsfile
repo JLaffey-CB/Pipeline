@@ -15,7 +15,7 @@ pipeline {
         timeout(time: 6) {
           sh 'ls'
         }
-        
+
       }
     }
     stage('stagethree') {
@@ -23,15 +23,14 @@ pipeline {
         node {
           label 'CentOSAgent'
         }
-        
+
       }
       steps {
         echo 'We can limit this to a specific node for just this step'
         sh 'ls'
-        dir(path: 'cd ..') {
-          sh 'ls'
-        }
-        
+        sh 'ls > listing.txt'
+        sh 'ls'
+
       }
     }
   }

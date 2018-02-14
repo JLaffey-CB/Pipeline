@@ -41,7 +41,18 @@ pipeline {
       sh './gradlew --info sonarqube'
     }
   }
-*/  
+*/
+  stage('stagefour') {
+    steps {
+      @Library("your-library-name") _
+      standardPipeline {
+        projectName = "Project1"
+        serverDomain = "Project1 Server Domain"
+      }
+    }
+
+  }
+}
   }
   environment {
     Global = 'IBeEverywhere'

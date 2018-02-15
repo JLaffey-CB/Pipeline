@@ -33,6 +33,18 @@ pipeline {
 
       }
     }
+
+    stage('demoPipeline') {
+      steps {
+      @Library("demoPipeline") _
+      demoPipeline {
+          projectName = "Project1"
+          serverDomain = "Project1 Server Domain"
+      }
+        }
+
+      }
+    }
 /*    stage('SCM') {
     git 'https://github.com/foo/bar.git'
   }
@@ -48,5 +60,5 @@ pipeline {
   environment {
     Global = 'IBeEverywhere'
   }
-  
+
 }

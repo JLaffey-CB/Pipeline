@@ -34,18 +34,7 @@ pipeline {
       }
     }
 
-    stage('demoPipeline') {
-    environment {
-      projectName = 'Project1'
-      serverDomain = 'Project1 Server Domain'
-    }
-      steps {
-      @Library("demoPipeline") _
-      demoPipeline
-        }
 
-      }
-    }
 /*    stage('SCM') {
     git 'https://github.com/foo/bar.git'
   }

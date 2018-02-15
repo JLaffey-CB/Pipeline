@@ -48,5 +48,5 @@ pipeline {
   environment {
     Global = 'IBeEverywhere'
   }
-  @Library("demoPipeline") _
+  
 }

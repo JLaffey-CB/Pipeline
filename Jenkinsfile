@@ -42,10 +42,18 @@ pipeline {
     }
   }
 */
-
+    stage('demoPipleline') {
+      steps {
+      demoPipeline {
+          projectName = "Project1"
+          serverDomain = "Project1 Server Domain"
+      }
+      }
+    }
 }
 
   environment {
     Global = 'IBeEverywhere'
   }
+  @Library("demoPipeline") _
 }

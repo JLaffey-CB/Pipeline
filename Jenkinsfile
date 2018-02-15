@@ -37,7 +37,7 @@ pipeline {
       echo 'Something in this stage changed to you're seeing this message'
         }
       }
-*/      
+/*
     }
 
 
@@ -52,7 +52,7 @@ pipeline {
 */
 
 }
-/*  post {
+  post {
     always {
     echo 'The pipeline was started so this will always print'
     }
@@ -64,7 +64,7 @@ pipeline {
     }
 
   }
-*/
+
   environment {
     Global = 'IBeEverywhere'
   }

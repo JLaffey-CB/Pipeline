@@ -18,10 +18,17 @@ pipeline {
 
       }
       post {
-        changed {
-        echo 'Something in this stage changed to you're seeing this message'
-          }
+        always {
+        echo 'The stage was started so this will always print'
         }
+        success {
+        echo 'The stage ran successfully'
+        }
+        failure {
+        echo 'Something went wrong and the stage failed'
+        }
+
+      }
     }
     stage('stagethree') {
       agent {

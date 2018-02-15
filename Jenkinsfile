@@ -17,6 +17,11 @@ pipeline {
         }
 
       }
+      post {
+        changed {
+        echo 'Something in this stage changed to you're seeing this message'
+          }
+        }
     }
     stage('stagethree') {
       agent {
@@ -32,11 +37,7 @@ pipeline {
         sh 'ls'
 
       }
-    post {
-      changed {
-      echo 'Something in this stage changed to you're seeing this message'
-        }
-      }
+
 
     }
 

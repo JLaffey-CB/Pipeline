@@ -51,7 +51,7 @@ pipeline {
 */
 
 }
-  post {
+/*  post {
     always {
     echo 'The pipeline was started so this will always print'
     }
@@ -63,7 +63,7 @@ pipeline {
     }
 
   }
-
+*/
   environment {
     Global = 'IBeEverywhere'
   }

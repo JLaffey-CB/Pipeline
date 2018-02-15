@@ -32,6 +32,11 @@ pipeline {
         sh 'ls'
 
       }
+    post {
+      changed {
+      echo 'Something in this stage changed to you're seeing this message'
+        }
+      }
     }
 
 
@@ -46,6 +51,18 @@ pipeline {
 */
 
 }
+  post {
+    always {
+    echo 'The pipeline was started so this will always print'
+    }
+    success {
+    echo 'The pipeline ran successfully'
+    }
+    failure {
+    echo 'Something went wrong and the run failed'
+    }
+
+  }
 
   environment {
     Global = 'IBeEverywhere'

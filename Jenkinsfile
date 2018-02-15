@@ -32,11 +32,12 @@ pipeline {
         sh 'ls'
 
       }
-    post {
+/*    post {
       changed {
       echo 'Something in this stage changed to you're seeing this message'
         }
       }
+*/      
     }
 
 

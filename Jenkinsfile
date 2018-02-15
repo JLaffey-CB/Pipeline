@@ -19,15 +19,11 @@ pipeline {
       }
       post {
         always {
-        echo 'The stage was started so this will always print'
+        echo 'This is stage two'
         }
-        success {
-        echo 'The stage ran successfully'
+        changed {
+        echo 'There was a different completion status than the last run'
         }
-        failure {
-        echo 'Something went wrong and the stage failed'
-        }
-
       }
     }
     stage('stagethree') {
